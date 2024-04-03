@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/arch/static/js/main.dce251be.js",
+    "static/js/787.1fb35464.chunk.js": "/arch/static/js/787.1fb35464.chunk.js",
+    "index.html": "/arch/index.html",
+    "main.dce251be.js.map": "/arch/static/js/main.dce251be.js.map",
+    "787.1fb35464.chunk.js.map": "/arch/static/js/787.1fb35464.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dce251be.js"
+  ]
+}
