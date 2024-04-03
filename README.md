@@ -1,4 +1,5 @@
 # ARCH (A Recycling Centre Hub)   
+Winner 2024 EAIT Hackathon
 
 ## Description | Problem Statement
 Have you ever wanted to recycle those Monster Energy TM cans but there wasn't a container for change bin in sight? HOW USUAL OF THEM!!!! The distribution of the bins is sparse and lacking, in particular in places like UQ or other busy places. From cans on the ground to bottles in UQ lakes, all the way to trash in the ocean. WE NEED A SOLUTION!! This is where A.R.C.H. comes in. ARCH or A Recycling Centre Hub is going to innovate by revolutionising the way people recycle, ensuring convenient access to recycling stations, reducing waste and fostering a cleaner, healthier environment for all. Currently, the university has no incentive for people on campus to recycle recyclable materials.
