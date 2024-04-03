@@ -103,7 +103,7 @@ const Home: FC<any> = (): ReactElement => {
                         </CardActionArea>
                     </Card>
 
-                    <Card sx={{ height: "400px" }}>
+                    <Card sx={{ height: "500px" }}>
                         <Typography
                             sx={{ my: 1, fontWeight: 500, fontSize: "medium" }}
                             align="center"
