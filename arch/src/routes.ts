@@ -3,6 +3,7 @@ import Scan from "./pages/Scan.tsx";
 import Home from "./pages/Home.tsx";
 
 import { FC } from "react";
+import Leaderboard from './pages/Leaderboard.tsx';
 
 // interface
 interface Route {
@@ -29,4 +30,12 @@ export const routes: Array<Route> = [
         enabled: true,
         component: Scan,
     },
+  {
+    key: "leaderboard",
+    title: "",
+    path: "/leaderboard",
+    enabled: true,
+    component: Leaderboard,
+    hideFromHeader: false,
+  },
 ];
