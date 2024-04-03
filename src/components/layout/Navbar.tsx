@@ -1,30 +1,13 @@
-import React, { FC, ReactElement } from "react";
-import {
-    Box,
-    Link,
-    Container,
-    IconButton,
-    Menu,
-    MenuItem,
-    Toolbar,
-    Typography,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { routes } from "../../routes.ts";
-import { NavLink } from "react-router-dom";
-import { Capitalise } from "../../common/textFunctions.ts";
-import AccountMenu from "./AccountMenu.tsx";
+import React, { FC, ReactElement } from 'react';
+import { Box, Container, IconButton, Toolbar, Typography } from '@mui/material';
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+import { ArrowBack } from '@mui/icons-material';
+import Avatar from '@mui/material/Avatar';
 
 const Navbar: FC = (): ReactElement => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-    const handleOpenNavMenu = (event: any) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+    const navigate = useNavigate();
+    const location = useLocation();
 
     return (
         <Box
@@ -35,70 +18,15 @@ const Navbar: FC = (): ReactElement => {
         >
             <Container>
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        sx={{
-                            mr: 2,
-                            display: { xs: "none", md: "flex" },
-                            color: "white",
-                            maxWidth: "lg",
-                        }}
-                    >
-                        ReactAttic
-                    </Typography>
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", md: "none" },
-                        }}
-                    >
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", md: "none" },
-                            }}
-                        >
-                            {routes.map((page) => (
-                                <Link
-                                    key={page.key}
-                                    component={NavLink}
-                                    to={page.path}
-                                    color="black"
-                                    underline="none"
-                                    variant="button"
-                                >
-                                    <MenuItem onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">
-                                            {Capitalise(page.title)}
-                                        </Typography>
-                                    </MenuItem>
-                                </Link>
-                            ))}
-                        </Menu>
-                    </Box>
+                    {location.pathname !== '/' && (<IconButton onClick={() => navigate('/')}>
+                        <ArrowBack sx={{color: 'white'}}/>
+                    </IconButton>)}
+                    {location.pathname === '/' && (<img
+                        src="https://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png"
+                        width={30}
+                        style={{marginRight: '5px'}}
+                    ></img>)}
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -107,41 +35,17 @@ const Navbar: FC = (): ReactElement => {
                             flexGrow: 1,
                             display: { xs: "flex", md: "none" },
                             color: "white",
+                            textTransform:'capitalize'
                         }}
                     >
-                        ARCH
+                        {location.pathname === '/' ? "ARCH" : location.pathname.slice(1)}
                     </Typography>
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "none", md: "flex" },
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "flex-start",
-                                alignItems: "center",
-                                marginLeft: "1rem",
-                            }}
-                        >
-                            {routes.map((page) => (
-                                <Link
-                                    key={page.key}
-                                    component={NavLink}
-                                    to={page.path}
-                                    color="black"
-                                    underline="none"
-                                    variant="button"
-                                    sx={{ marginLeft: "2rem", color: "white" }}
-                                >
-                                    {Capitalise(page?.title)}
-                                </Link>
-                            ))}
-                        </Box>
-                    </Box>
                     <Box sx={{ alignItems: "right" }}></Box>
+                    {location.pathname === '/' && (
+                        <IconButton onClick={() => navigate('/account')}>
+                            <Avatar sx={{width: 30, height: 30}}>J</Avatar>
+                        </IconButton>
+                    )}
                 </Toolbar>
             </Container>
         </Box>
