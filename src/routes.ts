@@ -1,9 +1,10 @@
 // pages
-import Scan from "./pages/Scan.tsx";
-import Home from "./pages/Home.tsx";
+import Scan from './pages/Scan.tsx';
+import Home from './pages/Home.tsx';
 
-import { FC } from "react";
+import { FC } from 'react';
 import Leaderboard from './pages/Leaderboard.tsx';
+import Account from './pages/Account';
 
 // interface
 interface Route {
@@ -37,5 +38,12 @@ export const routes: Array<Route> = [
     enabled: true,
     component: Leaderboard,
     hideFromHeader: false,
+  },
+  {
+    key: "account",
+    title: "",
+    path: "/account",
+    enabled: true,
+    component: Account,
   },
 ];

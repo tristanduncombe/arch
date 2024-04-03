@@ -1,4 +1,4 @@
-import React, { ReactElement, FC, useEffect, useState } from "react";
+import React, { ReactElement, FC } from "react";
 import {
     Box,
     Card,
@@ -7,12 +7,10 @@ import {
     Divider,
     Paper,
     Typography,
-    IconButton,
 } from "@mui/material";
 import GoogleMapReact from "google-map-react";
 import Bin from "../components/Bin.tsx";
 import { useNavigate } from "react-router";
-import TapAndPlayIcon from "@mui/icons-material/TapAndPlay";
 
 const Home: FC<any> = (): ReactElement => {
     const defaultProps = {
