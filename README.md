@@ -1,14 +1,14 @@
 # ARCH (A Recycling Centre Hub)   
 
 ## Description | Problem Statement
-Have you ever wanted to recycle those Monster Energy TM cans but there wasn't a container for change bin in sight? HOW USUAL OF THEM!!!! The distribution of the bins is sparse and lacking, in particular in places like UQ or other busy places. From cans on the ground to bottles in UQ lakes, all the way to trash in the ocean. WE NEED A SOLUTION!! This is where A.R.C.H. comes in. ARCH or A Recycling Centre Hub is going to innovate by revolutionising the way people recycle, ensuring convenient access to recycling stations, reducing waste and fostering a cleaner, healthier environment for all. 
+Have you ever wanted to recycle those Monster Energy TM cans but there wasn't a container for change bin in sight? HOW USUAL OF THEM!!!! The distribution of the bins is sparse and lacking, in particular in places like UQ or other busy places. From cans on the ground to bottles in UQ lakes, all the way to trash in the ocean. WE NEED A SOLUTION!! This is where A.R.C.H. comes in. ARCH or A Recycling Centre Hub is going to innovate by revolutionising the way people recycle, ensuring convenient access to recycling stations, reducing waste and fostering a cleaner, healthier environment for all. Currently the university has no incentive for people on campus to 
 
 ## Size of Problem
 It may seem like a small problem but continued negligence can result in masses of recyclable material heading to landfill, the ocean or even our very own  lake. 
 
 
 ## Solution
-A.R.C.H. is a mobile application that allows users to find the nearest ARCH recycling bin, report full or missing bins, and earn recycling rewards. As part of our solution multiple ARCH bins will be placed all across the Universities. These bins allow users to earn rewards for recycling bottles and cans. The bins will also be smart bins capable of monitoring its waste level and alerting the relevant authorities. Bins will also handle the incoming materials and provide users with a NFC scan spot so that they can claim their reward. 
+A.R.C.H. is a mobile application that allows users to find the nearest ARCH recycling bin, report full or missing bins, and earn recycling rewards. As part of our solution multiple ARCH bins will be placed all across the University. These bins allow users to earn rewards for recycling bottles and cans. The bins will also be smart bins capable of monitoring its waste level and alerting the relevant authorities. Bins will also handle the incoming materials and provide users with an NFC scan spot so that they can claim their reward. 
 
 
 ## How the solution works | Features
