@@ -21,27 +21,4 @@ export const routes: Array<Route> = [
         enabled: true,
         component: Home,
     },
-    {
-        key: "courses-route",
-        title: "Courses",
-        path: "/Courses",
-        enabled: true,
-        component: Courses,
-    },
-    {
-        key: "course-route",
-        title: "",
-        path: "/Courses/:id",
-        enabled: true,
-        component: Course,
-        hideFromHeader: true,
-    },
-    {
-        key: "course-assessmentitem-route",
-        title: "",
-        path: "/Courses/:id/AssessmentItem/:assessmentId",
-        enabled: true,
-        component: Exam,
-        hideFromHeader: true,
-    },
 ];
