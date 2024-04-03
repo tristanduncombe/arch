@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from "react";
-import { Box, Container, IconButton, Toolbar, Typography } from "@mui/material";
+import { Box, Container, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { ArrowBack } from "@mui/icons-material";
@@ -42,9 +42,16 @@ const Navbar: FC = (): ReactElement => {
                             textTransform: "capitalize",
                         }}
                     >
-                        {location.pathname === "/"
-                            ? "ARCH"
-                            : location.pathname.slice(1)}
+                        {location.pathname === '/' ? (
+                            <Stack>
+                                ARCH
+                            <Box
+                                sx={{ fontWeight: "light", fontSize: "small" }}
+                            >
+                                A Recycle Center Hub
+                            </Box>
+                            </Stack>
+                        ) : location.pathname.slice(1)}
                     </Typography>
                     <Box sx={{ alignItems: "right" }}></Box>
                     {location.pathname === "/" && (

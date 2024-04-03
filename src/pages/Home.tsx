@@ -1,12 +1,16 @@
 import React, { ReactElement, FC, useState } from "react";
 import {
     Box,
+    Button,
     Card,
     CardActionArea,
     CardContent,
     Divider,
     IconButton,
     Paper,
+    Dialog, DialogActions,
+    DialogContent, DialogContentText,
+    DialogTitle,
     Typography,
 } from "@mui/material";
 import GoogleMapReact from "google-map-react";
@@ -23,8 +27,17 @@ const Home: FC<any> = (): ReactElement => {
         zoom: 18,
     };
     const navigate = useNavigate();
-    const [show, setShow] = useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
     return (
+        <>
         <Box
             sx={{
                 flexGrow: 1,
@@ -102,22 +115,30 @@ const Home: FC<any> = (): ReactElement => {
                         pl: 2,
                     }}
                 >
-                    <Typography sx={{}}>Redeem Bottle</Typography>
-                    <IconButton
-                        onClick={() => {
-                            setShow(true);
-                        }}
+                    <Button
+                        onClick={handleClickOpen}
                         sx={{
                             display: "flex",
                             justifyContent: "flex-end",
                             mr: "auto",
                         }}
+                        startIcon={<TapAndPlayIcon />}
                     >
-                        <TapAndPlayIcon />
-                    </IconButton>
+                        Redeem Bottle
+                    </Button>
                 </Card>
             </Card>
         </Box>
+        <Dialog open={open} onClose={handleClose}>
+            <DialogTitle>Ready to Scan</DialogTitle>
+            <DialogContent>
+                <DialogContentText>Hold your phone near the object to scan</DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose}>Cancel</Button>
+            </DialogActions>
+        </Dialog>
+        </>
     );
 };
 

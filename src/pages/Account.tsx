@@ -12,7 +12,7 @@ const mockData = [
 
 function Account() {
     return (
-        <Card>
+        <Card sx={{ px: 2, backgroundColor: "#F7F6F3" }} elevation={0}>
             <CardContent>
                 <Stack direction="row"  alignContent="center">
                     <Avatar sx={{ width: 56, height: 56, mr: 3 }}>J</Avatar>
