@@ -23,7 +23,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       >
         <Navbar />
           {children}
-        <Footer />
       </Box >
     </>
   );
