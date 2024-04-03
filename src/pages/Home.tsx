@@ -1,16 +1,18 @@
-import React, { ReactElement, FC } from "react";
+import React, { ReactElement, FC, useState } from "react";
 import {
     Box,
     Card,
     CardActionArea,
     CardContent,
     Divider,
+    IconButton,
     Paper,
     Typography,
 } from "@mui/material";
 import GoogleMapReact from "google-map-react";
 import Bin from "../components/Bin.tsx";
 import { useNavigate } from "react-router";
+import TapAndPlayIcon from "@mui/icons-material/TapAndPlay";
 
 const Home: FC<any> = (): ReactElement => {
     const defaultProps = {
@@ -30,28 +32,13 @@ const Home: FC<any> = (): ReactElement => {
             }}
         >
             <Card sx={{ px: 4, backgroundColor: "#F7F6F3" }} elevation={0}>
-                <Paper elevation={0} sx={{ my: 4, backgroundColor: "#F7F6F3" }}>
-                    <Box sx={{ display: "flex" }}>
-                        <img
-                            src="https://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png"
-                            width={64}
-                        ></img>
-                        <Box>
-                            <Box sx={{ fontWeight: "bold" }}>ARCH</Box>
-                            <Box
-                                sx={{ fontWeight: "light", fontSize: "small" }}
-                            >
-                                A Recycle Center Hub
-                            </Box>
-                        </Box>
-                    </Box>
-                </Paper>
                 <Card
                     sx={{
                         width: "100%",
                         display: "flex",
                         align: "start",
                         mb: 2,
+                        mt: 2,
                     }}
                 >
                     <CardActionArea>
