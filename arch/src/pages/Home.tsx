@@ -12,23 +12,8 @@ const Home: FC<any> = (): ReactElement => {
     zoom: 18
   };
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        backgroundColor: "#c2c2c2",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Paper elevation={3} sx={{maxWidth: "lg", width: "100%", px: 3, py: 3}}>
-        {/*<Typography variant="h2">*/}
-        {/*  ARCH*/}
-        {/*</Typography>*/}
-        {/*<Typography variant="h6">*/}
-        {/*  A Recycling Centre Hub!*/}
-        {/*</Typography>*/}
-        <Card sx={{ width: '100%', height: '50px' }}>
+      <Paper elevation={3} sx={{maxWidth: "lg", width: "100%", height: '100%', px: 3, py: 3}}>
+        <Card sx={{ width: '100%', height: '50px', mb: 1 }}>
           <CardActionArea
               onClick={() => alert('omg')}
           >
@@ -37,7 +22,7 @@ const Home: FC<any> = (): ReactElement => {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ width: '100%', height: '50px' }}>
+        <Card sx={{ width: '100%', height: '50px', mb: 1 }}>
           <CardActionArea
               onClick={() => alert('omg')}
           >
@@ -80,7 +65,6 @@ const Home: FC<any> = (): ReactElement => {
           </ GoogleMapReact>
         </Card>
       </Paper>
-    </Box>
   );
 };
 
