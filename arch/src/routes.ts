@@ -1,4 +1,5 @@
 // pages
+import Scan from "./pages/Scan.tsx";
 import Home from "./pages/Home.tsx";
 
 import { FC } from "react";
@@ -20,5 +21,12 @@ export const routes: Array<Route> = [
         path: "/",
         enabled: true,
         component: Home,
+    },
+    {
+        key: "scan-route",
+        title: "Scan",
+        path: "/scan",
+        enabled: true,
+        component: Scan,
     },
 ];
