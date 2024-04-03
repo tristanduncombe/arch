@@ -19,8 +19,8 @@ A.R.C.H. is a mobile application that allows users to find the nearest ARCH recy
 - Earn rewards
     By recycling, you can earn rewards that can be redeemed at participating stores. This will incentivize people to recycle and help reduce waste in the environment.
 
-probs need to talk about lack of incentive currently on uq for this and why its a problem more in detail. 
-
-
 
 ## Market Size
+The market is not just everyone in UQ that cares about recycling. It involves the entire world. 
+
+## 
