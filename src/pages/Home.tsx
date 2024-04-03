@@ -1,4 +1,4 @@
-import React, { ReactElement, FC } from "react";
+import React, { ReactElement, FC, useEffect, useState } from "react";
 import {
     Box,
     Card,
@@ -7,10 +7,12 @@ import {
     Divider,
     Paper,
     Typography,
+    IconButton,
 } from "@mui/material";
 import GoogleMapReact from "google-map-react";
 import Bin from "../components/Bin.tsx";
 import { useNavigate } from "react-router";
+import TapAndPlayIcon from "@mui/icons-material/TapAndPlay";
 
 const Home: FC<any> = (): ReactElement => {
     const defaultProps = {
@@ -21,6 +23,7 @@ const Home: FC<any> = (): ReactElement => {
         zoom: 18,
     };
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
     return (
         <Box
             sx={{
@@ -29,17 +32,21 @@ const Home: FC<any> = (): ReactElement => {
             }}
         >
             <Card sx={{ px: 4, backgroundColor: "#F7F6F3" }} elevation={0}>
-                <Paper
-                    elevation={0}
-                    sx={{ my: 4, backgroundColor: "#F7F6F3", display: "flex" }}
-                >
-                    <img
-                        src="https://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png"
-                        width={64}
-                    ></img>
-                    <div>
-                        ARCH
-                    </div>
+                <Paper elevation={0} sx={{ my: 4, backgroundColor: "#F7F6F3" }}>
+                    <Box sx={{ display: "flex" }}>
+                        <img
+                            src="https://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png"
+                            width={64}
+                        ></img>
+                        <Box>
+                            <Box sx={{ fontWeight: "bold" }}>ARCH</Box>
+                            <Box
+                                sx={{ fontWeight: "light", fontSize: "small" }}
+                            >
+                                A Recycle Center Hub
+                            </Box>
+                        </Box>
+                    </Box>
                 </Paper>
                 <Card
                     sx={{
@@ -61,7 +68,7 @@ const Home: FC<any> = (): ReactElement => {
                         </CardContent>
                     </CardActionArea>
                     <Divider orientation="vertical" />
-                    <CardActionArea onClick={() => alert("omg")}>
+                    <CardActionArea>
                         <CardContent>
                             <Typography>Balance</Typography>
                         </CardContent>
@@ -69,23 +76,23 @@ const Home: FC<any> = (): ReactElement => {
                             <Typography>200</Typography>
                         </CardContent>
                         <CardContent>
-                            <Typography>REDEEM</Typography>
+                            <Typography
+                                sx={{ fontWeight: "500", fontSize: "small" }}
+                                onClick={() => navigate("/leaderboard")}
+                            >
+                                POSITION
+                            </Typography>
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card
-                    sx={{
-                        width: "100%",
-                        height: "50px",
-                        "&hover": { cursor: "pointer" },
-                    }}
-                    onClick={() => navigate("/leaderboard")}
-                >
-                    <CardContent>Leaderboard</CardContent>
-                </Card>
 
-                <Card sx={{ height: "500px", mt: 4 }}>
-                    <Typography sx={{ mt: -4 }}>NEAREST BIN</Typography>
+                <Card sx={{ height: "400px" }}>
+                    <Typography
+                        sx={{ my: 1, fontWeight: 500, fontSize: "medium" }}
+                        align="center"
+                    >
+                        NEAREST BIN
+                    </Typography>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: "" }}
                         defaultCenter={defaultProps.center}
@@ -98,6 +105,31 @@ const Home: FC<any> = (): ReactElement => {
                         <Bin lat={-27.498718} lng={153.014906} />
                         <Bin lat={-27.499884} lng={153.013913} />
                     </GoogleMapReact>
+                </Card>
+
+                <Card
+                    sx={{
+                        width: "100%",
+                        display: "flex",
+                        align: "start",
+                        mt: 2,
+                        alignItems: "center",
+                        pl: 2,
+                    }}
+                >
+                    <Typography sx={{}}>Redeem Bottle</Typography>
+                    <IconButton
+                        onClick={() => {
+                            setShow(true);
+                        }}
+                        sx={{
+                            display: "flex",
+                            justifyContent: "flex-end",
+                            mr: "auto",
+                        }}
+                    >
+                        <TapAndPlayIcon />
+                    </IconButton>
                 </Card>
             </Card>
         </Box>
