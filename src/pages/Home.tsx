@@ -29,8 +29,17 @@ const Home: FC<any> = (): ReactElement => {
             }}
         >
             <Card sx={{ px: 4, backgroundColor: "#F7F6F3" }} elevation={0}>
-                <Paper elevation={0} sx={{ my: 4 }}>
-                    ARCH
+                <Paper
+                    elevation={0}
+                    sx={{ my: 4, backgroundColor: "#F7F6F3", display: "flex" }}
+                >
+                    <img
+                        src="https://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png"
+                        width={64}
+                    ></img>
+                    <div>
+                        ARCH
+                    </div>
                 </Paper>
                 <Card
                     sx={{
